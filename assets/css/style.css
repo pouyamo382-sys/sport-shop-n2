@@ -1,0 +1,474 @@
+/* 🌈 رنگ‌ها */
+:root {
+  --primary: #054a29;
+  --secondary: #b5d24b;
+  --tertiary: #04a777;
+  --accent: #ede580;
+  --background: #d7e7c6;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --on-primary: #ffffff;
+}
+
+/* ⚙️ پایه */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+
+  text-align: right; /* راست‌چین کردن تمام متن‌ها */
+}
+
+
+/* 🔹 هدر و منوی اصلی */
+header {
+  background: var(--primary);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--on-primary);
+}
+
+.logo span {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu a {
+  color: var(--on-primary);
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+/* 🔹 Hero */
+.hero {
+  position: relative;
+  background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--on-primary);
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 74, 41, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* 🔹 دکمه‌ها */
+.btn-primary {
+  background-color: var(--secondary);
+  color: var(--on-primary);
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--tertiary);
+}
+
+.btn-accent {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  padding: 10px 22px;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.btn-accent:hover {
+  background-color: var(--secondary);
+}
+
+/* 🔹 دسته‌بندی‌ها و کارت محصولات */
+.categories, .special-products {
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.categories h2, .special-products h2 {
+  color: var(--primary);
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.category-cards, .product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.category-card, .product-card {
+  background: var(--surface);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  max-width: 320px;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.category-card:hover, .product-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-card img, .product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.category-card h3, .product-card h3 {
+  margin: 12px 0 8px;
+  color: var(--primary);
+}
+
+.category-card p, .product-card p {
+  color: #555;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.product-card .price {
+  font-weight: 600;
+  color: var(--tertiary);
+  margin: 10px 0;
+}
+
+/* 🔹 فرم ثبت سفارش و پرداخت */
+.checkout, .payment, .invoice {
+  max-width: 600px;
+  margin: 40px auto;
+  background: var(--surface);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.checkout h2, .payment h2, .invoice h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  color: var(--text);
+  font-size: 16px;
+  text-align: right; /* راست‌چین کردن تگ‌های label */
+}
+
+input, textarea, select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  text-align: right; /* راست‌چین کردن محتوای input و textarea */
+}
+textarea {
+  resize: vertical;
+}
+
+footer {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  margin-top: 50px;
+}
+/* 🔹 بخش سبد خرید */
+.cart {
+  max-width: 800px; /* کاهش عرض به 800px */
+  margin: 50px auto;
+  padding: 20px;
+  background: var(--surface);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.cart h2 {
+  color: var(--primary);
+  font-size: 28px; /* کمی کوچک‌تر کردن سایز برای متناسب‌تر بودن */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* کاهش فاصله میان آیتم‌ها */
+}
+
+.cart-item {
+  display: flex;
+  background: var(--surface);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  align-items: center;
+  transition: 0.3s ease;
+  justify-content: space-between; /* استفاده از space-between برای فاصله‌گذاری بهینه */
+}
+
+.cart-item:hover {
+  transform: translateY(-3px);
+}
+
+.cart-item img {
+  width: 80px; /* کاهش عرض تصویر برای مناسب‌تر شدن */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-left: 15px;
+}
+
+.item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+}
+
+.item-details h3 {
+  color: var(--primary);
+  margin: 0;
+  font-size: 16px;
+}
+
+.item-details p {
+  color: var(--tertiary);
+  font-weight: 600;
+}
+
+.item-details label {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.item-details input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+
+.btn-remove {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: auto;
+}
+
+.btn-remove:hover {
+  background-color: #c0392b;
+}
+
+/* جمع‌بندی سبد خرید */
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: var(--surface);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.cart-summary p {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* دکمه تایید در خلاصه سبد خرید */
+.cart-summary .btn-primary {
+  background-color: var(--secondary); /* رنگ دکمه */
+  color: var(--on-primary);
+  padding: 8px 16px; /* کاهش padding برای دکمه کوچکتر */
+  font-size: 14px; /* اندازه فونت کوچک‌تر */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: auto; /* عرض خود دکمه */
+  text-align: center;
+}
+
+.cart-summary .btn-primary:hover {
+  background-color: var(--tertiary); /* تغییر رنگ در hover */
+}
+
+/* واکنش‌گرایی */
+@media screen and (max-width: 768px) {
+  .cart {
+    max-width: 100%; /* برای دستگاه‌های کوچک، تمام عرض صفحه */
+    padding: 15px; /* کاهش پدینگ */
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item img {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .cart-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    text-align: left;
+  }
+
+  .cart-summary p {
+    font-size: 16px;
+  }
+
+  .cart-summary .btn-primary {
+    width: 100%; /* دکمه تمام عرض در صفحه موبایل */
+  }
+}
+/* انتخاب محل تحویل */
+.delivery-location {
+  margin: 20px 0;
+}
+
+.delivery-location input {
+  margin-right: 10px;
+}
+
+/* انتخاب تاریخ و زمان تحویل */
+.delivery-date {
+  margin: 20px 0;
+}
+
+.delivery-date input {
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+
+}
+
+/* انتخاب زمان پرداخت */
+.payment-time {
+  margin: 20px 0;
+}
+
+.payment-time input {
+  margin-right: 10px;
+}
+
+/* انتخاب نحوه پرداخت */
+.payment-method {
+  margin: 20px 0;
+}
+
+.payment-method select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* پیش فاکتور */
+.invoice-preview table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice-preview th, .invoice-preview td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  text-align: right;
+}
+
+.invoice-preview p {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}

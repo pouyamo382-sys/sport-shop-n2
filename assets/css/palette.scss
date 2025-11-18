@@ -1,0 +1,51 @@
+/* Coolors Exported Palette - https://coolors.co/054a29-b5d24b-ede580-d7e7c6-04a777 */
+
+/* CSS HEX */
+:root {
+  --british-racing-green: #054a29ff;
+  --yellow-green: #b5d24bff;
+  --straw: #ede580ff;
+  --nyanza: #d7e7c6ff;
+  --jade: #04a777ff;
+}
+
+/* CSS HSL */
+:root {
+  --british-racing-green-hsl: hsla(151, 87%, 15%, 1);
+  --yellow-green-hsl: hsla(73, 60%, 56%, 1);
+  --straw-hsl: hsla(56, 75%, 72%, 1);
+  --nyanza-hsl: hsla(89, 41%, 84%, 1);
+  --jade-hsl: hsla(162, 95%, 34%, 1);
+}
+
+/* SCSS HEX */
+$british-racing-green: #054a29ff;
+$yellow-green: #b5d24bff;
+$straw: #ede580ff;
+$nyanza: #d7e7c6ff;
+$jade: #04a777ff;
+
+/* SCSS HSL */
+$british-racing-green-hsl: hsla(151, 87%, 15%, 1);
+$yellow-green-hsl: hsla(73, 60%, 56%, 1);
+$straw-hsl: hsla(56, 75%, 72%, 1);
+$nyanza-hsl: hsla(89, 41%, 84%, 1);
+$jade-hsl: hsla(162, 95%, 34%, 1);
+
+/* SCSS RGB */
+$british-racing-green-rgb: rgba(5, 74, 41, 1);
+$yellow-green-rgb: rgba(181, 210, 75, 1);
+$straw-rgb: rgba(237, 229, 128, 1);
+$nyanza-rgb: rgba(215, 231, 198, 1);
+$jade-rgb: rgba(4, 167, 119, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #054a29ff, #b5d24bff, #ede580ff, #d7e7c6ff, #04a777ff);
+$gradient-right: linear-gradient(90deg, #054a29ff, #b5d24bff, #ede580ff, #d7e7c6ff, #04a777ff);
+$gradient-bottom: linear-gradient(180deg, #054a29ff, #b5d24bff, #ede580ff, #d7e7c6ff, #04a777ff);
+$gradient-left: linear-gradient(270deg, #054a29ff, #b5d24bff, #ede580ff, #d7e7c6ff, #04a777ff);
+$gradient-top-right: linear-gradient(45deg, #054a29ff, #b5d24bff, #ede580ff, #d7e7c6ff, #04a777ff);
+$gradient-bottom-right: linear-gradient(135deg, #054a29ff, #b5d24bff, #ede580ff, #d7e7c6ff, #04a777ff);
+$gradient-top-left: linear-gradient(225deg, #054a29ff, #b5d24bff, #ede580ff, #d7e7c6ff, #04a777ff);
+$gradient-bottom-left: linear-gradient(315deg, #054a29ff, #b5d24bff, #ede580ff, #d7e7c6ff, #04a777ff);
+$gradient-radial: radial-gradient(#054a29ff, #b5d24bff, #ede580ff, #d7e7c6ff, #04a777ff);

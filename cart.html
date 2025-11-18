@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سبد خرید | Sportify</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/light.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">🏋️‍♀️ <span>Sportify</span></div>
+    <ul class="nav-menu">
+      <li><a href="index.html">خانه</a></li>
+      <li><a href="product.html">محصولات</a></li>
+      <li><a href="cart.html" class="active">سبد خرید</a></li>
+      <li><a href="contact.html">تماس با ما</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="cart">
+    <h2>سبد خرید شما</h2>
+
+    <!-- لیست محصولات داخل سبد خرید -->
+    <div class="cart-items">
+      <div class="cart-item">
+        <img src="assets/images/x.jpg" alt="کفش ورزشی">
+        <div class="item-details">
+          <h3>کفش ورزشی مدل X</h3>
+          <p class="price">۲,۵۰۰,۰۰۰ تومان</p>
+          <div class="item-quantity">
+            <label for="quantity">تعداد:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+          </div>
+          <button class="btn-remove">حذف</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="assets/images/sport.jpg" alt="لباس ورزشی">
+        <div class="item-details">
+          <h3>لباس ورزشی مدل Y</h3>
+          <p class="price">۹۰۰,۰۰۰ تومان</p>
+          <div class="item-quantity">
+            <label for="quantity">تعداد:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+          </div>
+          <button class="btn-remove">حذف</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="assets/images/b.jpg" alt="لوازم بدنسازی">
+        <div class="item-details">
+          <h3>دمبل ۱۰ کیلویی</h3>
+          <p class="price">۵۰۰,۰۰۰ تومان</p>
+          <div class="item-quantity">
+            <label for="quantity">تعداد:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+          </div>
+          <button class="btn-remove">حذف</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- انتخاب محل تحویل -->
+    <div class="delivery-location">
+      <h3>انتخاب محل تحویل</h3>
+      <label for="home-delivery">درب محل</label>
+      <input type="radio" id="home-delivery" name="delivery" value="home" checked>
+      <label for="store-pickup">درب فروشگاه</label>
+      <input type="radio" id="store-pickup" name="delivery" value="store">
+    </div>
+
+    <!-- انتخاب تاریخ و زمان تحویل -->
+    <div class="delivery-date">
+      <h3>انتخاب تاریخ و زمان تحویل</h3>
+      <label for="delivery-date">تاریخ تحویل:</label>
+      <input type="date" id="delivery-date" name="delivery-date" required>
+      <label for="delivery-time">زمان تحویل:</label>
+      <input type="time" id="delivery-time" name="delivery-time" required>
+    </div>
+
+    <!-- انتخاب زمان پرداخت -->
+    <div class="payment-time">
+      <h3>زمان پرداخت</h3>
+      <label for="pay-on-delivery">هنگام تحویل</label>
+      <input type="radio" id="pay-on-delivery" name="payment-time" value="pay-on-delivery" checked>
+      <label for="pay-online">پرداخت اینترنتی</label>
+      <input type="radio" id="pay-online" name="payment-time" value="pay-online">
+    </div>
+
+    <!-- انتخاب نحوه پرداخت -->
+    <div class="payment-method">
+      <h3>نحوه پرداخت</h3>
+      <select id="payment-method" name="payment-method" required>
+        <option value="gateway">درگاه پرداخت آنلاین</option>
+        <option value="card-to-card">کارت به کارت</option>
+      </select>
+    </div>
+
+    <!-- نمایش پیش فاکتور -->
+    <div class="invoice-preview">
+      <h3>پیش فاکتور</h3>
+      <table>
+        <tr>
+          <th>محصول</th>
+          <th>تعداد</th>
+          <th>قیمت</th>
+        </tr>
+        <tr>
+          <td>کفش ورزشی مدل X</td>
+          <td>1</td>
+          <td>۲,۵۰۰,۰۰۰ تومان</td>
+        </tr>
+        <tr>
+          <td>لباس ورزشی مدل Y</td>
+          <td>1</td>
+          <td>۹۰۰,۰۰۰ تومان</td>
+        </tr>
+        <tr>
+          <td>دمبل ۱۰ کیلویی</td>
+          <td>1</td>
+          <td>۵۰۰,۰۰۰ تومان</td>
+        </tr>
+      </table>
+      <p>مجموع: <strong>۴,۹۰۰,۰۰۰ تومان</strong></p>
+    </div>
+
+    <div class="cart-summary">
+      <button class="btn-primary">ادامه به پرداخت</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Sportify | طراحی شده با 💚 توسط شما</p>
+</footer>
+
+</body>
+</html>
