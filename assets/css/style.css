@@ -1,4 +1,4 @@
-/* 🌈 رنگ‌ها */
+
 :root {
   --primary: #054a29;
   --secondary: #b5d24b;
@@ -10,7 +10,7 @@
   --on-primary: #ffffff;
 }
 
-/* ⚙️ پایه */
+
 * {
   margin: 0;
   padding: 0;
@@ -18,11 +18,10 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Vazirmatn', sans-serif; /* تغییر فونت به Vazirmatn */
   background-color: var(--background);
   color: var(--text);
   line-height: 1.6;
-
   text-align: right; /* راست‌چین کردن تمام متن‌ها */
 }
 
@@ -36,22 +35,36 @@ header {
 .navbar {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 1px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 100px;
   font-size: 24px;
   font-weight: 700;
   color: var(--on-primary);
+  margin-right: auto;
+  padding-left: 0;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+  display: block;
 }
 
 .logo span {
   color: var(--accent);
   text-decoration: underline;
+  font-size: 22px;
+  font-weight: 700;
 }
+
 
 .nav-menu {
   list-style: none;
@@ -332,12 +345,14 @@ footer {
   background-color: #e74c3c;
   color: #fff;
   border: none;
-  padding: 4px 10px;
+  padding: 8px 20px; 
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 14px;
   cursor: pointer;
   transition: 0.3s ease;
-  width: auto;
+  width: auto; 
+  display: inline-block; 
+  text-align: center; 
 }
 
 .btn-remove:hover {
@@ -471,4 +486,89 @@ footer {
   margin-top: 15px;
   font-size: 18px;
   font-weight: bold;
+}
+footer {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  padding: 30px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.footer-links, .footer-about, .footer-logo-container {
+  flex: 1 1 30%;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: var(--on-primary);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: var(--secondary);
+}
+
+/* لوگو و متن زیر آن */
+.footer-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 70px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.footer-logo-text {
+  font-size: 14px;
+  color: var(--on-primary);
+  max-width: 250px;
+  line-height: 1.4;
+}
+
+.footer-about p {
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 10px;
+}
+
+/* واکنش‌گرایی برای موبایل */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-links, .footer-about, .footer-logo-container {
+    text-align: center;
+  }
 }
