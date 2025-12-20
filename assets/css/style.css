@@ -562,3 +562,63 @@ footer {
     padding: 0 10px;
   }
 }
+  /* 🔹 جدول‌های ادمین */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.admin-table th {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  font-weight: 600;
+}
+
+.admin-table tr:hover {
+  background-color: var(--background);
+}
+
+.admin-table img.thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.status-active {
+  color: green;
+  font-weight: 600;
+}
+
+.status-inactive {
+  color: red;
+  font-weight: 600;
+}
+
+/* ریسپانسیو جدول‌ها */
+@media screen and (max-width: 768px) {
+  .admin-table th,
+  .admin-table td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .admin-table img.thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+}
