@@ -437,3 +437,128 @@ footer {
   .footer-container { flex-direction: column; gap: 20px; }
   .footer-links, .footer-about, .footer-logo-container { text-align: center; }
 }
+.product-grid .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;/* مرکز کردن تیتر هر بخش */
+.product-grid h2,
+.special-products h2 {
+  text-align: center; /* تیتر وسط صفحه */
+  font-size: 32px;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.product-grid .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.special-products .product-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.product-card {
+  border-radius: 12px;
+  padding: 16px;
+  background-color: var(--surface);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* متن داخل کارت وسط چین */
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  color: var(--primary);
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.product-card p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.product-card .price {
+  color: var(--tertiary);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.product-card button {
+  width: 100%;
+}
+
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  color: var(--primary);
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.product-card p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.product-card .price {
+  color: var(--tertiary);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.product-card button {
+  width: 100%;
+}
+.product-grid h2,
+.special-products h2 {
+  text-align: center;      /* وسط چین کردن تیتر */
+  font-size: 32px;
+  color: var(--primary);
+  margin: 40px auto 30px auto; /* فاصله از بالا و پایین */
+  width: 100%;
+  display: block;
+}
+
+.product-grid .grid-container,
+.special-products .product-cards {
+  margin-top: 20px;
+  padding: 0 15px; /* فاصله از کناره‌ها */
+}
+
+@media screen and (max-width: 768px) {
+  .product-grid .grid-container,
+  .special-products .product-cards {
+    padding: 0 10px;
+  }
+}
