@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پنل ادمین - Sport Shop</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/light.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>    <ul class="nav-menu">
+      <li><a href="index.html" class="active">خانه</a></li>
+      <li><a href="product.html">محصولات</a></li>
+      <li><a href="cart.html">سبد خرید</a></li>
+      <li><a href="contact.html">تماس با ما</a></li>
+    </ul></header>
+
+<main>
+
+  <!-- جدول کاربران -->
+  <h2>لیست کاربران</h2>
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th>شناسه</th>
+        <th>نام و نام خانوادگی</th>
+        <th>ایمیل</th>
+        <th>نقش</th>
+        <th>وضعیت</th>
+        <th>تاریخ ثبت‌نام</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>علی رضایی</td>
+        <td>ali@example.com</td>
+        <td>ادمین</td>
+        <td class="status-active">فعال</td>
+        <td>2025-01-12</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>زهرا موسوی</td>
+        <td>zahra@example.com</td>
+        <td>مشتری</td>
+        <td class="status-active">فعال</td>
+        <td>2025-02-08</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>محمد کریمی</td>
+        <td>m.karimi@example.com</td>
+        <td>مشتری</td>
+        <td class="status-inactive">غیرفعال</td>
+        <td>2024-12-20</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- جدول محصولات -->
+  <h2>لیست محصولات</h2>
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th>شناسه</th>
+        <th>تصویر</th>
+        <th>نام محصول</th>
+        <th>دسته‌بندی</th>
+        <th>قیمت</th>
+        <th>موجودی</th>
+        <th>وضعیت</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><img src="./assets/images/x.jpg" alt="محصول 1" class="thumbnail"></td>
+        <td>کفش ورزشی</td>
+        <td>کفش</td>
+        <td>1,200,000 تومان</td>
+        <td>15</td>
+        <td class="status-active">فعال</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><img src="./assets/images/sport.jpg" alt="محصول 2" class="thumbnail"></td>
+        <td>تیشرت ورزشی</td>
+        <td>لباس</td>
+        <td>350,000 تومان</td>
+        <td>40</td>
+        <td class="status-active">فعال</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><img src="./assets/images/b.jpg" alt="محصول 3" class="thumbnail"></td>
+        <td>دمبل 5 کیلو</td>
+        <td>وسایل بدنسازی</td>
+        <td>500,000 تومان</td>
+        <td>0</td>
+        <td class="status-inactive">ناموجود</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- جدول پیام‌ها -->
+  <h2>لیست پیام‌ها</h2>
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th>شناسه پیام</th>
+        <th>نام فرستنده</th>
+        <th>ایمیل فرستنده</th>
+        <th>موضوع</th>
+        <th>پیام</th>
+        <th>تاریخ ارسال</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>رضا احمدی</td>
+        <td>reza@example.com</td>
+        <td>پرسش محصول</td>
+        <td>آیا این کفش سایز 42 موجود است؟</td>
+        <td>2025-03-15</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>سارا حسینی</td>
+        <td>sara@example.com</td>
+        <td>پشتیبانی</td>
+        <td>سفارش من هنوز ارسال نشده است.</td>
+        <td>2025-03-16</td>
+      </tr>
+    </tbody>
+  </table>
+
+</main>
+
+</body>
+</html>
