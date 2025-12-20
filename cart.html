@@ -4,21 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>سبد خرید | Sportify</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/light.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
   <nav class="navbar">
-   <div class="logo">
-  <img src="assets/logo/logonomy-1763446210430.jpeg" >
-  
-</div>
+    <div class="logo">
+      <img src="assets/logo/logonomy-1763446210430.jpeg">
+    </div>
+
     <ul class="nav-menu">
       <li><a href="index.html">خانه</a></li>
       <li><a href="product.html">محصولات</a></li>
@@ -32,87 +33,122 @@
   <section class="cart">
     <h2>سبد خرید شما</h2>
 
-    <!-- لیست محصولات داخل سبد خرید -->
+    <!-- Cart Items -->
     <div class="cart-items">
-      <div class="cart-item">
+
+      <!-- Item 1 -->
+      <div class="cart-item md-card md-card-elevated">
         <img src="assets/images/x.jpg" alt="کفش ورزشی">
+
         <div class="item-details">
           <h3>کفش ورزشی مدل X</h3>
           <p class="price">۲,۵۰۰,۰۰۰ تومان</p>
+
           <div class="item-quantity">
-            <label for="quantity">تعداد:</label>
-            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <label>تعداد:</label>
+            <input type="number" value="1" min="1">
           </div>
-          <button class="btn-remove">حذف</button>
+
+          <button class="md-btn md-text md-small">
+            حذف
+          </button>
         </div>
       </div>
 
-      <div class="cart-item">
+      <!-- Item 2 -->
+      <div class="cart-item md-card md-card-elevated">
         <img src="assets/images/sport.jpg" alt="لباس ورزشی">
+
         <div class="item-details">
           <h3>لباس ورزشی مدل Y</h3>
           <p class="price">۹۰۰,۰۰۰ تومان</p>
+
           <div class="item-quantity">
-            <label for="quantity">تعداد:</label>
-            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <label>تعداد:</label>
+            <input type="number" value="1" min="1">
           </div>
-          <button class="btn-remove">حذف</button>
+
+          <button class="md-btn md-text md-small">
+            حذف
+          </button>
         </div>
       </div>
 
-      <div class="cart-item">
+      <!-- Item 3 -->
+      <div class="cart-item md-card md-card-elevated">
         <img src="assets/images/b.jpg" alt="لوازم بدنسازی">
+
         <div class="item-details">
           <h3>دمبل ۱۰ کیلویی</h3>
           <p class="price">۵۰۰,۰۰۰ تومان</p>
+
           <div class="item-quantity">
-            <label for="quantity">تعداد:</label>
-            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <label>تعداد:</label>
+            <input type="number" value="1" min="1">
           </div>
-          <button class="btn-remove">حذف</button>
+
+          <button class="md-btn md-text md-small">
+            حذف
+          </button>
         </div>
       </div>
+
     </div>
 
-    <!-- انتخاب محل تحویل -->
-    <div class="delivery-location">
+    <!-- Delivery Location -->
+    <div class="delivery-location md-card md-card-filled">
       <h3>انتخاب محل تحویل</h3>
-      <label for="home-delivery">درب محل</label>
-      <input type="radio" id="home-delivery" name="delivery" value="home" checked>
-      <label for="store-pickup">درب فروشگاه</label>
-      <input type="radio" id="store-pickup" name="delivery" value="store">
+
+      <label>
+        <input type="radio" name="delivery" checked>
+        درب محل
+      </label>
+
+      <label>
+        <input type="radio" name="delivery">
+        درب فروشگاه
+      </label>
     </div>
 
-    <!-- انتخاب تاریخ و زمان تحویل -->
-    <div class="delivery-date">
+    <!-- Delivery Date -->
+    <div class="delivery-date md-card md-card-filled">
       <h3>انتخاب تاریخ و زمان تحویل</h3>
-      <label for="delivery-date">تاریخ تحویل:</label>
-      <input type="date" id="delivery-date" name="delivery-date" required>
-      <label for="delivery-time">زمان تحویل:</label>
-      <input type="time" id="delivery-time" name="delivery-time" required>
+
+      <label>تاریخ تحویل:</label>
+      <input type="date" required>
+
+      <label>زمان تحویل:</label>
+      <input type="time" required>
     </div>
 
-    <!-- انتخاب زمان پرداخت -->
-    <div class="payment-time">
+    <!-- Payment Time -->
+    <div class="payment-time md-card md-card-filled">
       <h3>زمان پرداخت</h3>
-      <label for="pay-on-delivery">هنگام تحویل</label>
-      <input type="radio" id="pay-on-delivery" name="payment-time" value="pay-on-delivery" checked>
-      <label for="pay-online">پرداخت اینترنتی</label>
-      <input type="radio" id="pay-online" name="payment-time" value="pay-online">
+
+      <label>
+        <input type="radio" name="payment-time" checked>
+        هنگام تحویل
+      </label>
+
+      <label>
+        <input type="radio" name="payment-time">
+        پرداخت اینترنتی
+      </label>
     </div>
 
-    <!-- انتخاب نحوه پرداخت -->
-    <div class="payment-method">
+    <!-- Payment Method -->
+    <div class="payment-method md-card md-card-filled">
       <h3>نحوه پرداخت</h3>
-      <select id="payment-method" name="payment-method" required>
-        <option value="gateway">درگاه پرداخت آنلاین</option>
-        <option value="card-to-card">کارت به کارت</option>
+      <select required>
+        <option>درگاه پرداخت آنلاین</option>
+        <option>کارت به کارت</option>
       </select>
     </div>
 
-    <!-- نمایش پیش فاکتور -->
-    <div class="invoice-preview">
+    <!-- Invoice -->
+    <div class="invoice-preview md-card md-card-outlined">
       <h3>پیش فاکتور</h3>
+
       <table>
         <tr>
           <th>محصول</th>
@@ -135,17 +171,25 @@
           <td>۵۰۰,۰۰۰ تومان</td>
         </tr>
       </table>
-      <p>مجموع: <strong>۴,۹۰۰,۰۰۰ تومان</strong></p>
+
+      <p>
+        مجموع: <strong>۴,۹۰۰,۰۰۰ تومان</strong>
+      </p>
     </div>
 
+    <!-- Checkout Button -->
     <div class="cart-summary">
-      <button class="btn-primary">ادامه به پرداخت</button>
+      <button class="md-btn md-filled md-small">
+        ادامه به پرداخت
+      </button>
     </div>
+
   </section>
 </main>
+
 <footer>
   <div class="footer-container">
-    <!-- لینک‌های سریع سمت چپ -->
+
     <div class="footer-links">
       <h3>لینک‌های سریع</h3>
       <ul>
@@ -156,19 +200,20 @@
       </ul>
     </div>
 
-    <!-- لوگو در وسط -->
     <div class="footer-logo-container">
-      <img src="assets/logo/logonomy-1763446210430.jpeg" alt="Sportify Logo" class="footer-logo">
-      <p class="footer-logo-text">Sportify ارائه‌دهنده بهترین محصولات ورزشی با کیفیت بالا و ارسال سریع.</p>
+      <img src="assets/logo/logonomy-1763446210430.jpeg" class="footer-logo">
+      <p class="footer-logo-text">
+        Sportify ارائه‌دهنده بهترین محصولات ورزشی با کیفیت بالا و ارسال سریع.
+      </p>
     </div>
 
-    <!-- اطلاعات تماس سمت راست -->
     <div class="footer-about">
       <h3>تماس با ما</h3>
       <p>نام: پویا مرادی</p>
       <p>تلفن: 09375856048</p>
       <p>ایمیل: pouyamo382@gmail.com</p>
     </div>
+
   </div>
 
   <div class="footer-bottom">
