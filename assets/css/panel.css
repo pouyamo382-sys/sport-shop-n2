@@ -1,0 +1,95 @@
+/* ===== Admin Panel Styles ===== */
+
+/* استفاده از رنگ‌ها و فونت‌های تعریف شده در main.css */
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  text-align: right;
+}
+
+main {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* عنوان بخش‌ها */
+h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: var(--text);
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 5px;
+  font-size: 22px;
+}
+
+/* جدول‌ها */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  background: var(--surface);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.admin-table th {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  font-weight: 600;
+}
+
+.admin-table tbody tr:hover {
+  background-color: #e9f5ff;
+}
+
+/* تصاویر محصولات */
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* وضعیت‌ها */
+.status-active {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.status-inactive {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* ریسپانسیو جدول‌ها */
+@media (max-width: 768px) {
+  .admin-table th, .admin-table td {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+
+  main {
+    padding: 15px;
+  }
+}
+
+/* لینک‌ها و هدر پنل از main.css استفاده می‌شود و نیازی به تکرار ندارد */

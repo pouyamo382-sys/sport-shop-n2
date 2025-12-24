@@ -1,0 +1,197 @@
+/* ===== Global ===== */
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+/* ===== HERO ===== */
+.home-hero {
+  position: relative;
+  height: 80vh;
+  background: url('../images/sport.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.home-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 74, 41, 0.7);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+.hero-buttons .btn {
+  margin: 0 10px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #05942d;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #046f1d;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #05942d;
+}
+
+.btn-secondary {
+  background-color: #e6f4ea;
+  color: #05942d;
+}
+
+.btn-secondary:hover {
+  background-color: #d1eed7;
+}
+
+/* ===== Features ===== */
+.home-features {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 50px auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature-card {
+  background: #fff;
+  flex: 1 1 200px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  margin: 15px 0 10px;
+  color: #05942d;
+}
+
+/* ===== Categories ===== */
+.categories {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.category-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  max-width: 250px;
+}
+
+.category-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Product Slider ===== */
+.home-product-slider {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.slider-wrapper {
+  overflow-x: auto;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  min-width: 250px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  flex-shrink: 0;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card .price {
+  display: block;
+  margin: 15px 0;
+  font-weight: 700;
+  color: #05942d;
+}
+
+/* ===== Discount Section ===== */
+.home-discount {
+  background: #05942d;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 12px;
+  margin: 50px 20px;
+}
+
+.home-discount h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+

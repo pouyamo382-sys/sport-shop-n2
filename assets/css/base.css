@@ -1,0 +1,124 @@
+:root {
+  --primary: #054a29;
+  --secondary: #b5d24b;
+  --tertiary: #04a777;
+  --accent: #ede580;
+  --background: #d7e7c6;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --on-primary: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  text-align: right;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  text-align: right;
+}
+
+textarea { resize: vertical; }
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 50px; /* ترکیب padding ها */
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06); /* سایه قوی‌تر از نسخه دوم */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Container */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Logo */
+.logo img {
+  height: 48px;
+  object-fit: contain;
+}
+
+/* Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 28px; /* از نسخه دوم */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a,
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600; /* ترکیب با نسخه اول و دوم */
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: #05942d; /* یا #2ecc71 می‌توان انتخاب کرد */
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.nav-menu li a.active,
+.nav-menu li a:hover,
+.nav-menu a.active,
+.nav-menu a:hover {
+  color: #05942d; /* رنگ اصلی هاور و لینک فعال */
+}
+
+.nav-menu a.active::after,
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-menu {
+    gap: 18px;
+  }
+}
