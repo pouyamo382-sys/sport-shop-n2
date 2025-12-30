@@ -104,3 +104,140 @@ button[type="submit"]:hover {
     grid-template-columns: 1fr;
   }
 }
+/* ===============================
+   MATERIAL TEXT FIELD (Outlined)
+================================ */
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid var(--md-sys-color-outline, #ccc);
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 14px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover */
+.form-group input:hover,
+.form-group textarea:hover {
+  border-color: var(--primary);
+}
+
+/* Focus */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(5, 74, 41, 0.15);
+}
+
+
+/* ===============================
+   MATERIAL CHECKBOX
+================================ */
+
+.md-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+}
+
+.md-checkbox input {
+  display: none;
+}
+
+.md-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid var(--primary);
+  position: relative;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+/* Checked */
+.md-checkbox input:checked + .checkmark {
+  background-color: var(--primary);
+}
+
+.md-checkbox input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  top: 1px;
+  left: 6px;
+}
+
+/* Disabled */
+.md-checkbox input:disabled + .checkmark {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+/* ===============================
+   MATERIAL RADIO BUTTON
+================================ */
+
+.md-radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.md-radio input {
+  display: none;
+}
+
+.md-radio .radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+/* Checked */
+.md-radio input:checked + .radio::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
+/* Disabled */
+.md-radio input:disabled + .radio {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+/* ===============================
+   FAB (Go To Top)
+================================ */
+
+.fab-go-top {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  z-index: 999;
+  display: none;
+}
