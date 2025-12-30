@@ -6,11 +6,12 @@
   <title>محصولات | Sportify</title>
 <link rel="stylesheet" href="assets/css/main.css">
 
-
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- اضافه برای آیکن‌ها -->
+
+  <script src="assets/js/product.js" defer></script> <!-- JS جدید برای این صفحه -->
 </head>
 <body>
 
@@ -20,12 +21,18 @@
       <img src="assets/logo/logonomy-1763446210430.jpeg" alt="Sportify">
     </div>
 
-    <ul class="nav-menu">
-      <li><a href="index.html">خانه</a></li>
-      <li><a href="product.html" class="active">محصولات</a></li>
-      <li><a href="cart.html">سبد خرید</a></li>
-      <li><a href="contact.html">تماس با ما</a></li>
-    </ul>
+   <ul class="nav-menu">
+  <li><a href="index.html">خانه</a></li>
+  <li><a href="product.html" class="active">محصولات</a></li>
+  <li>
+    <a href="cart.html" class="cart-icon">
+      <i class="material-icons">shopping_cart</i>
+      <span class="md-badge md-badge-large" id="cart-count">0</span>
+    </a>
+  </li>
+  <li><a href="contact.html">تماس با ما</a></li>
+  <li><a href="panel.html">ادمین</a></li>
+</ul>
   </nav>
 </header>
 
@@ -37,6 +44,7 @@
     <div class="product-cards">
 
       <div class="product-card md-card md-card-elevated">
+        <span class="md-badge md-badge-small"></span> <!-- Badge small برای نشان وقوع تخفیف (کاربرد: وقوع اتفاق بدون تعداد) -->
         <img src="assets/images/x.jpg" alt="کفش ورزشی">
         <h3>کفش ورزشی مدل X</h3>
         <p>کفش‌های راحت و بادوام مناسب برای تمرینات طولانی</p>
@@ -151,4 +159,3 @@
 
 </body>
 </html>
-
