@@ -15,6 +15,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- اضافه برای آیکن‌ها -->
+
+  <script src="assets/js/index.js" defer></script> <!-- JS جدید برای این صفحه -->
 </head>
 <body>
 
@@ -27,7 +30,12 @@
     <ul class="nav-menu">
       <li><a href="index.html" class="active">خانه</a></li>
       <li><a href="product.html">محصولات</a></li>
-      <li><a href="cart.html">سبد خرید</a></li>
+      <li>
+        <a href="cart.html" class="cart-icon">
+          <i class="material-icons">shopping_cart</i> <!-- آیکن سبد خرید -->
+          <span class="md-badge md-badge-large" id="cart-count">0</span> <!-- Badge large برای تعداد -->
+        </a>
+      </li>
       <li><a href="contact.html">تماس با ما</a></li>
       <li><a href="panel.html">ادمین</a></li>
     </ul>
