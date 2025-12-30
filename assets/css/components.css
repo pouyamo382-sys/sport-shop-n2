@@ -1,7 +1,7 @@
 
 .md-btn {
   border: none;
-  border-radius: 50px; /* Default: fully rounded (pill-shaped) */
+  border-radius: 50px;
   cursor: pointer;
   font-family: inherit;
   font-weight: 500;
@@ -100,7 +100,46 @@
 
 .md-card-pressed::after { opacity: 0.12; }
 .md-card-pressed { box-shadow: var(--md-sys-color-shadow-level4); }
+.md-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--md-sys-color-error, #f44336); /* رنگ قرمز متریال */
+  color: var(--md-sys-color-on-error, #ffffff);
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 4px;
+  border-radius: 8px;
+  min-width: 16px;
+}
 
+.md-badge-large {
+  height: 16px; /* بر اساس specs متریال */
+  min-width: 16px; /* برای یک رقم */
+  /* برای بیش از یک رقم، عرض auto می‌شود */
+}
+
+.md-badge-small {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%; /* دایره کامل */
+  padding: 0;
+  min-width: 6px; /* بدون متن، فقط نشان وقوع */
+}
+
+.cart-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.product-card {
+  position: relative; /* برای قرارگیری badge روی کارت */
+}
 /* =========================
    FOOTER
 ========================= */
