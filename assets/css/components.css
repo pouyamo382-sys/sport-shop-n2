@@ -231,3 +231,107 @@ footer {
     text-align: center;
   }
 }
+/* Material Design 3 Switch Component */
+.mdc-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 52px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.mdc-switch__input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mdc-switch__track {
+  position: absolute;
+  width: 52px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: var(--surface-container-highest, #e2e2e2);
+  border: 2px solid var(--outline, #79747e);
+  transition: all 0.2s ease;
+}
+
+.mdc-switch__handle {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--on-surface, #fff);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mdc-switch__state-layer {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: -4px;
+  left: -4px;
+  background-color: currentColor;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+
+/* Checked state */
+.mdc-switch__input:checked + .mdc-switch__track {
+  background-color: var(--primary, #6750a4);
+  border-color: var(--primary, #6750a4);
+}
+
+.mdc-switch__input:checked ~ .mdc-switch__handle {
+  transform: translateX(20px);
+  background-color: var(--on-primary, #fff);
+}
+
+/* Hover, Focus, Pressed */
+.mdc-switch:hover .mdc-switch__state-layer {
+  opacity: 0.08;
+}
+
+.mdc-switch__input:focus-visible ~ .mdc-switch__state-layer {
+  opacity: 0.12;
+}
+
+.mdc-switch__input:active ~ .mdc-switch__state-layer {
+  opacity: 0.12;
+  animation: ripple 0.4s ease-out;
+}
+
+/* Disabled */
+.mdc-switch__input:disabled {
+  cursor: not-allowed;
+}
+
+.mdc-switch__input:disabled ~ * {
+  opacity: 0.38;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.md-btn {
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+  border-radius: 8px;
+}
+
+.md-card {
+  background: var(--md-surface);
+  color: var(--md-text-primary);
+  box-shadow: var(--md-shadow-1);
+}
