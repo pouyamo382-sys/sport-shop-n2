@@ -1,126 +1,227 @@
 <!DOCTYPE html>
-<html lang="fa" class="light-high-contrast">
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>محصولات | Sportify</title>
-<link rel="stylesheet" href="assets/css/main.css">
+
+  <link rel="stylesheet" href="assets/css/main.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- اضافه برای آیکن‌ها -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <script src="assets/java/product.js" defer></script> <!-- JS جدید برای این صفحه -->
+  <script src="assets/java/product.js" defer></script>
 </head>
-<body>
+
+<body class="light">
 
 <header>
   <nav class="navbar">
     <div class="logo">
       <img src="assets/logo/logonomy-1763446210430.jpeg" alt="Sportify">
     </div>
-
-   <ul class="nav-menu">
-  <li><a href="index.html">خانه</a></li>
-  <li><a href="product.html" class="active">محصولات</a></li>
-  <li>
-    <a href="cart.html" class="cart-icon">
-      <i class="material-icons">shopping_cart</i>
-      <span class="md-badge md-badge-large" id="cart-count">0</span>
-    </a>
-  </li>
-  <li><a href="contact.html">تماس با ما</a></li>
-  <li><a href="panel.html">ادمین</a></li>
-</ul>
+    <ul class="nav-menu">
+      <li><a href="index.html">خانه</a></li>
+      <li><a href="product.html" class="active">محصولات</a></li>
+      <li>
+        <a href="cart.html" class="cart-icon">
+          <i class="material-icons">shopping_cart</i>
+          <span class="md-badge md-badge-large" id="cart-count">0</span>
+        </a>
+      </li>
+      <li><a href="contact.html">تماس با ما</a></li>
+      <li><a href="panel.html">ادمین</a></li>
+      <li><a href="settings.html">تنظیمات</a></li>
+    </ul>
   </nav>
 </header>
 
 <main>
 
-  <!-- بخش محصولات ویژه -->
+  <!-- محصولات ویژه -->
   <section class="special-products">
     <h2>محصولات ویژه</h2>
     <div class="product-cards">
 
       <div class="product-card md-card md-card-elevated">
-        <span class="md-badge md-badge-small"></span> <!-- Badge small برای نشان وقوع تخفیف (کاربرد: وقوع اتفاق بدون تعداد) -->
+        <button class="favorite-btn material-icons">favorite_border</button>
         <img src="assets/images/x.jpg" alt="کفش ورزشی">
         <h3>کفش ورزشی مدل X</h3>
         <p>کفش‌های راحت و بادوام مناسب برای تمرینات طولانی</p>
         <p class="price">۲,۵۰۰,۰۰۰ تومان</p>
+        <div class="star-rating">
+          <i class="material-icons star" data-value="1">star_border</i>
+          <i class="material-icons star" data-value="2">star_border</i>
+          <i class="material-icons star" data-value="3">star_border</i>
+          <i class="material-icons star" data-value="4">star_border</i>
+          <i class="material-icons star" data-value="5">star_border</i>
+        </div>
         <button class="md-btn md-filled md-small">افزودن به سبد خرید</button>
       </div>
 
       <div class="product-card md-card md-card-elevated">
+        <button class="favorite-btn material-icons">favorite_border</button>
         <img src="assets/images/sport.jpg" alt="لباس ورزشی">
         <h3>لباس ورزشی مدل Y</h3>
         <p>لباس‌های طراحی شده برای راحتی بیشتر در هنگام تمرین</p>
         <p class="price">۹۰۰,۰۰۰ تومان</p>
+        <div class="star-rating">
+          <i class="material-icons star" data-value="1">star_border</i>
+          <i class="material-icons star" data-value="2">star_border</i>
+          <i class="material-icons star" data-value="3">star_border</i>
+          <i class="material-icons star" data-value="4">star_border</i>
+          <i class="material-icons star" data-value="5">star_border</i>
+        </div>
         <button class="md-btn md-filled md-small">افزودن به سبد خرید</button>
       </div>
 
       <div class="product-card md-card md-card-elevated">
-        <img src="assets/images/b.jpg" alt="لوازم بدنسازی">
+        <button class="favorite-btn material-icons">favorite_border</button>
+        <img src="assets/images/b.jpg" alt="دمبل">
         <h3>دمبل ۱۰ کیلویی</h3>
         <p>دمبل‌های استیل ضدزنگ برای تمرینات بدنسازی خانگی</p>
         <p class="price">۵۰۰,۰۰۰ تومان</p>
+        <div class="star-rating">
+          <i class="material-icons star" data-value="1">star_border</i>
+          <i class="material-icons star" data-value="2">star_border</i>
+          <i class="material-icons star" data-value="3">star_border</i>
+          <i class="material-icons star" data-value="4">star_border</i>
+          <i class="material-icons star" data-value="5">star_border</i>
+        </div>
         <button class="md-btn md-filled md-small">افزودن به سبد خرید</button>
       </div>
 
     </div>
   </section>
 
-  <!-- بخش همه محصولات -->
+  <!-- فیلتر و جستجو -->
+  <section class="product-controls">
+    <input type="text" id="search-input" placeholder="جستجو در محصولات...">
+
+    <select id="category-filter">
+      <option value="all">همه دسته‌بندی‌ها</option>
+      <option value="shoes">کفش ورزشی</option>
+      <option value="clothes">لباس ورزشی</option>
+      <option value="equipment">لوازم ورزشی</option>
+      <option value="accessory">اکسسوری</option>
+    </select>
+
+    <select id="sort-filter">
+      <option value="default">مرتب‌سازی</option>
+      <option value="price-asc">قیمت: کم به زیاد</option>
+      <option value="price-desc">قیمت: زیاد به کم</option>
+      <option value="name-asc">نام: A-Z</option>
+      <option value="name-desc">نام: Z-A</option>
+    </select>
+  </section>
+
+  <!-- همه محصولات -->
   <section class="product-grid">
     <h2>محصولات فروشگاه</h2>
     <div class="grid-container">
 
+      <!-- تمام کارت‌ها دقیقاً همان کد شما -->
+      <!-- کفش -->
       <div class="md-card md-card-elevated product-card">
-        <img src="assets/images/x.jpg" alt="کفش ورزشی">
+        <button class="favorite-btn material-icons">favorite_border</button>
+        <img src="assets/images/x.jpg">
         <h3>کفش ورزشی مدل X</h3>
         <p>کفش‌های حرفه‌ای برای تمرینات طولانی و راحت.</p>
         <p class="price">۲,۵۰۰,۰۰۰ تومان</p>
+        <div class="star-rating">
+          <i class="material-icons star" data-value="1">star_border</i>
+          <i class="material-icons star" data-value="2">star_border</i>
+          <i class="material-icons star" data-value="3">star_border</i>
+          <i class="material-icons star" data-value="4">star_border</i>
+          <i class="material-icons star" data-value="5">star_border</i>
+        </div>
         <button class="md-btn md-filled md-small">افزودن به سبد خرید</button>
       </div>
 
+      <!-- لباس -->
       <div class="md-card md-card-elevated product-card">
-        <img src="assets/images/sport.jpg" alt="لباس ورزشی">
+        <button class="favorite-btn material-icons">favorite_border</button>
+        <img src="assets/images/sport.jpg">
         <h3>لباس ورزشی مدل Y</h3>
         <p>لباس سبک و راحت برای تمرینات روزانه.</p>
         <p class="price">۹۰۰,۰۰۰ تومان</p>
+        <div class="star-rating">
+          <i class="material-icons star" data-value="1">star_border</i>
+          <i class="material-icons star" data-value="2">star_border</i>
+          <i class="material-icons star" data-value="3">star_border</i>
+          <i class="material-icons star" data-value="4">star_border</i>
+          <i class="material-icons star" data-value="5">star_border</i>
+        </div>
         <button class="md-btn md-filled md-small">افزودن به سبد خرید</button>
       </div>
 
+      <!-- دمبل -->
       <div class="md-card md-card-elevated product-card">
-        <img src="assets/images/b.jpg" alt="دمبل ۱۰ کیلویی">
+        <button class="favorite-btn material-icons">favorite_border</button>
+        <img src="assets/images/b.jpg">
         <h3>دمبل ۱۰ کیلویی</h3>
         <p>دمبل‌های استیل ضدزنگ برای تمرین خانگی و حرفه‌ای.</p>
         <p class="price">۵۰۰,۰۰۰ تومان</p>
+        <div class="star-rating">
+          <i class="material-icons star" data-value="1">star_border</i>
+          <i class="material-icons star" data-value="2">star_border</i>
+          <i class="material-icons star" data-value="3">star_border</i>
+          <i class="material-icons star" data-value="4">star_border</i>
+          <i class="material-icons star" data-value="5">star_border</i>
+        </div>
         <button class="md-btn md-filled md-small">افزودن به سبد خرید</button>
       </div>
 
+      <!-- مت -->
       <div class="md-card md-card-elevated product-card">
-        <img src="assets/images/mat.jpg" alt="مت یوگا">
+        <button class="favorite-btn material-icons">favorite_border</button>
+        <img src="assets/images/mat.jpg">
         <h3>مت یوگا حرفه‌ای</h3>
-        <p>مت مقاوم و ضد لغزش برای تمرینات یوگا و ورزش‌های خانگی.</p>
+        <p>مت مقاوم و ضد لغزش برای تمرینات یوگا.</p>
         <p class="price">۳۰۰,۰۰۰ تومان</p>
+        <div class="star-rating">
+          <i class="material-icons star" data-value="1">star_border</i>
+          <i class="material-icons star" data-value="2">star_border</i>
+          <i class="material-icons star" data-value="3">star_border</i>
+          <i class="material-icons star" data-value="4">star_border</i>
+          <i class="material-icons star" data-value="5">star_border</i>
+        </div>
         <button class="md-btn md-filled md-small">افزودن به سبد خرید</button>
       </div>
 
+      <!-- قمقمه -->
       <div class="md-card md-card-elevated product-card">
-        <img src="assets/images/buttle.jpg" alt="قمقمه ورزشی">
+        <button class="favorite-btn material-icons">favorite_border</button>
+        <img src="assets/images/buttle.jpg">
         <h3>قمقمه ورزشی</h3>
-        <p>قمقمه مقاوم و سبک با ظرفیت مناسب برای ورزشکاران.</p>
+        <p>قمقمه مقاوم و سبک.</p>
         <p class="price">۱۵۰,۰۰۰ تومان</p>
+        <div class="star-rating">
+          <i class="material-icons star" data-value="1">star_border</i>
+          <i class="material-icons star" data-value="2">star_border</i>
+          <i class="material-icons star" data-value="3">star_border</i>
+          <i class="material-icons star" data-value="4">star_border</i>
+          <i class="material-icons star" data-value="5">star_border</i>
+        </div>
         <button class="md-btn md-filled md-small">افزودن به سبد خرید</button>
       </div>
 
+      <!-- کش -->
       <div class="md-card md-card-elevated product-card">
-        <img src="assets/images/rober.jpg" alt="کش ورزشی">
+        <button class="favorite-btn material-icons">favorite_border</button>
+        <img src="assets/images/rober.jpg">
         <h3>کش ورزشی</h3>
-        <p>کش مقاوم برای تمرینات قدرتی و کششی خانگی.</p>
+        <p>کش مقاوم برای تمرینات کششی.</p>
         <p class="price">۲۰۰,۰۰۰ تومان</p>
+        <div class="star-rating">
+          <i class="material-icons star" data-value="1">star_border</i>
+          <i class="material-icons star" data-value="2">star_border</i>
+          <i class="material-icons star" data-value="3">star_border</i>
+          <i class="material-icons star" data-value="4">star_border</i>
+          <i class="material-icons star" data-value="5">star_border</i>
+        </div>
         <button class="md-btn md-filled md-small">افزودن به سبد خرید</button>
       </div>
 
@@ -142,21 +243,22 @@
     </div>
 
     <div class="footer-logo-container">
-      <img src="assets/logo/logonomy-1763446210430.jpeg" class="footer-logo" alt="Sportify">
-      <p class="footer-logo-text">Sportify ارائه‌دهنده بهترین محصولات ورزشی با کیفیت بالا و ارسال سریع.</p>
+      <img src="assets/logo/logonomy-1763446210430.jpeg" class="footer-logo">
+      <p>Sportify ارائه‌دهنده بهترین محصولات ورزشی</p>
     </div>
 
     <div class="footer-about">
       <h3>تماس با ما</h3>
-      <p>نام: پویا مرادی</p>
-      <p>تلفن: 09375856048</p>
-      <p>ایمیل: pouyamo382@gmail.com</p>
+      <p>پویا مرادی</p>
+      <p>09375856048</p>
+      <p>pouyamo382@gmail.com</p>
     </div>
   </div>
 
-  <div class="footer-bottom">© 2025 Sportify | طراحی شده با 💚 توسط شما</div>
+  <div class="footer-bottom">
+    © 2025 Sportify
+  </div>
 </footer>
 
 </body>
 </html>
-
