@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تنظیمات - فروشگاه ورزشی</title>
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/light.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/settings.css">
+</head>
+
+<body class="light">
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/logo/logonomy-1763446210430.jpeg" alt="Sportify">
+    </div>
+    <ul class="nav-menu">
+      <li><a href="index.html">خانه</a></li>
+      <li><a href="product.html">محصولات</a></li>
+      <li><a href="cart.html">سبد خرید</a></li>
+      <li><a href="contact.html">تماس با ما</a></li>
+      <li><a href="panel.html">ادمین</a></li>
+      <li><a href="settings.html" class="active">تنظیمات</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="settings-section">
+    <h1>تنظیمات</h1>
+
+    <ul class="settings-list">
+      <li>
+        <span>حالت تاریک</span>
+        <label class="mdc-switch">
+          <input id="themeSwitch" type="checkbox" class="mdc-switch__input">
+          <span class="mdc-switch__track"></span>
+          <span class="mdc-switch__handle"></span>
+          <span class="mdc-switch__state-layer"></span>
+        </label>
+      </li>
+
+      <li>
+        <span>اعلان تخفیف‌ها</span>
+        <label class="mdc-switch">
+          <input type="checkbox" class="mdc-switch__input" checked>
+          <span class="mdc-switch__track"></span>
+          <span class="mdc-switch__handle"></span>
+          <span class="mdc-switch__state-layer"></span>
+        </label>
+      </li>
+
+      <li>
+        <span>نمونه غیرفعال</span>
+        <label class="mdc-switch">
+          <input type="checkbox" class="mdc-switch__input" disabled>
+          <span class="mdc-switch__track"></span>
+          <span class="mdc-switch__handle"></span>
+          <span class="mdc-switch__state-layer"></span>
+        </label>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<script src="assets/java/settings.js"></script>
+</body>
+</html>
